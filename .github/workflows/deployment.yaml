@@ -22,4 +22,19 @@ jobs:
           run: |
             docker push ${{ secrets.DOCKERHUB_USERNAME }}/facetest:1.0.0
 
+        - name: Access the Helm repository
+          run: |
+            git clone https://github.com/theoafactor/facetest.com_helm.git  
+            cd facetest.com_helm/facetest/templates
+
+            sed -i s"/facetest:1.0.0/facetest:2.0.0/" deployment.yaml
+            git add -A
+            git commit -m "Updated Helm template file for deployment"
+
+            git push facetest-helm master
+
+
+
+            
+
         
