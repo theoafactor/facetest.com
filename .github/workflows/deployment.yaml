@@ -36,7 +36,7 @@ jobs:
             git add -A
             git commit -m "Updated Helm template file for deployment"
 
-            git push facetest-helm master
+            git push origin master
 
 
 
