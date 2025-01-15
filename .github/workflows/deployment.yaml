@@ -31,7 +31,7 @@ jobs:
             git clone https://github.com/theoafactor/facetest.com_helm.git  
             cd facetest.com_helm/facetest/templates
 
-            sed -i s"/facetest:1.0.0/facetest:2.0.0/" deployment.yaml
+            sed -i s"/facetest:2.0.0/facetest:3.0.0/" deployment.yaml
             git remote set-url origin https://${{ secrets.REPO_TOKEN }}@github.com/theoafactor/facetest.com_helm.git
             cat deployment.yaml
             git add -A
